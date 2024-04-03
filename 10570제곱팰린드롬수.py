@@ -4,7 +4,6 @@ for i in range(t):
     cnt = 0
     for j in range(a,b+1):
         c = j ** (1/2)
-        print(c)
         if c == int(c):
             j = str(j)
             c = str(int(c))
