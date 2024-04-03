@@ -17,5 +17,5 @@ for q in range(t):
         for l in range(n//2 -k, n//2 +k + 1):
             cnt += farm[n-k-1][l]
             
-    print("#{} {}".format(q,cnt))
+    print("#{} {}".format(q+1,cnt))
                     
