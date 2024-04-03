@@ -2,7 +2,6 @@ t = int(input())
 
 for i in range(t):
     word = list(input())
-    print(word)
     ans = []
     for j in word:
         if j !='a' and j != 'e' and j != 'i' and j != 'o' and j != 'u':
