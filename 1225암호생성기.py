@@ -16,6 +16,6 @@ for tc in range(1,11):
                 queue.append(idx)
         if idx == 0:
             break
-            
+    print("#{} ".format(n),end="")        
     print(*queue)
     
