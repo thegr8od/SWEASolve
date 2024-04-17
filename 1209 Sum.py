@@ -28,7 +28,7 @@ for tc in range(1,11):
         
     for k in range(99,-1,-1):
         leftdiag_val += data[k][k] 
-    print(rightdiag_val, leftdiag_val)    
+   
     print("#{} {}".format(tc,max(row_val, column_val, rightdiag_val, leftdiag_val)))
 
         
