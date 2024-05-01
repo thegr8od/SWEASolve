@@ -7,5 +7,6 @@ for _ in range(10) :
             return a
         
         return power(a, n-1) * a
-
+    
     print("#{} {}".format(T, power(N, M)))
+    
