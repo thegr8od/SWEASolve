@@ -1,13 +1,31 @@
 t = int(input())
 
 for tc in range(1,t+1):
-    n , l = map(int, input().split())
-    data = []
-    for i in range(n):
-        data.append(list(map(int, input().split())))
-    
+    n,l = map(int, input().split())
+    tlst = []
+    klst = []
+    for _ in range(n):
+        t,k = map(int,input().split())
+        tlst.append(t)
+        klst.append(k)
+        
     ans = 0
-    for j in range(n):
-        now = data[j][1]
-        for k in range(n):
-           if data[j][1] + data[k][1] <=      
+    
+    def dfs(x,score,kal):
+        global ans
+        
+        if kal > l:
+            return
+        if score >= ans:
+            ans = score
+        if x == n:
+            return
+        dfs(x+1, score + tlst[x], kal + klst[x])
+        dfs(x+1, score, kal)
+        
+             
+
+    
+    dfs(0,0,0)
+    print("#{} {}".format(tc,ans))            
+                
