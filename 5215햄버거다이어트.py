@@ -2,30 +2,24 @@ t = int(input())
 
 for tc in range(1,t+1):
     n,l = map(int, input().split())
-    tlst = []
-    klst = []
+    t = []
+    k = []
     for _ in range(n):
-        t,k = map(int,input().split())
-        tlst.append(t)
-        klst.append(k)
-        
+        a,b = map(int,input().split())
+        t.append(a)
+        k.append(b)
     ans = 0
-    
-    def dfs(x,score,kal):
+    def dfs(x,taste,kal):
         global ans
-        
         if kal > l:
             return
-        if score >= ans:
-            ans = score
+        if taste >= ans:
+            ans = taste
         if x == n:
             return
-        dfs(x+1, score + tlst[x], kal + klst[x])
-        dfs(x+1, score, kal)
         
-             
-
-    
+        dfs(x+1, taste+t[x], +kal+k[x])
+        dfs(x+1,taste,kal)
+        
     dfs(0,0,0)
-    print("#{} {}".format(tc,ans))            
-                
+    print("#{} {}".format(tc, ans))
