@@ -11,7 +11,7 @@ for tc in range(1,t+1):
             else:
                 dp[i][j] = max(dp[i-1][j], dp[i][j-1])
     
-    print("#{} {}".format(tc, dp[-1][-1]))            
+    print("#{} {}".format(tc, dp[len(a)-1][-1]))            
         
         
         

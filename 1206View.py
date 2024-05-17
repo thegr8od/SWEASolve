@@ -1,3 +1,4 @@
+#1206 View
 for i in range(1,11):
     n = int(input())
     height = list(map(int, input().strip().split(" ")))
